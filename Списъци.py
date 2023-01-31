@@ -1,3 +1,8 @@
+#  Програма в която се съсдавт 2 спъка. Въвеждат се числата N и K. След това от потребителя се въвеждат толкова числа колкото е стойноста на N.
+#  Въведените числа по-големи от К се включват към първи списък, а тези по-малки от К и по-големи от 0 се включват към втори списък.
+#  Създават се методи за намиране на произведението на нечетните числата от първи списък, индекса на елемента с минимална стойност 
+#  от първи списък и разликата от най-големия и най-малкия елемент от втори списък.
+
 first_list = []
 second_list = []
 
@@ -28,20 +33,20 @@ for i in range(n):
     elif x <= k and x > 0:
         second_list.append(x)
 
-proizwedenie = 1
+product = 1
 
 for i in range (len(first_list)):
     if i % 2 != 0:
-        proizwedenie = proizwedenie * first_list[i]
+        product *= first_list[i]
 
 index_min_value = first_list.index(min(first_list))
 
 
-razlika = max(second_list) - min(second_list)
+difference = max(second_list) - min(second_list)
 
 print(first_list)
-print(f"Proizwedenie = {proizwedenie}")
-print(f"Indeksa s minimalna stoinost: {index_min_value}")
+print(f"Product = {product}")
+print(f"Index with minimal value: {index_min_value}")
 print("")
 print(second_list)
-print(f"Razlika: {razlika}")
+print(f"Difference: {difference}")

@@ -1,3 +1,7 @@
+#  В програмата се създава клас Книги с 4 инстанции на класа.
+#  Създават се методи за сортиране по име на книгата, търсене по автор и търсене по година. 
+
+
 class Book:
     def __init__(self, book_name, book_code, book_price, book_year, book_author):
         self.book_name = book_name
@@ -14,7 +18,13 @@ class Book:
         return f'({self.book_code}, {self.book_name}, {self.book_author}, \
 {self.book_price}, {self.book_year})'
 
-
+books = [
+        Book('A1', 4300, 12.99, 2022, 'B.C.'),
+        Book('A2', 4301, 39.99, 2021, 'B.D.'),
+        Book('A3', 4302, 36.99, 2021, 'A.C'),
+        Book('A4', 4303, 15.99, 2020, 'B.C.'),
+    ]
+    
 def sort_name(books):
     print(sorted(books, key=lambda x: x.book_name, reverse=True))
 
@@ -30,15 +40,7 @@ def search_book(books, book_code):
             return
     print('The book is not found')
 
-
-if __name__ == '__main__':
-    books = [
-        Book('A1', 121, 12.34, 2022, 'BC'),
-        Book('A2', 123, 34.56, 2021, 'BD'),
-        Book('A3', 125, 56.78, 2021, 'AC'),
-        Book('A4', 119, 12.43, 2020, 'BC'),
-    ]
-    sort_name(books)
-    author(books, 'BC')
-    search_book(books, 120)
-    search_book(books, 119)
+sort_name(books)
+author(books, 'B.C.')
+search_book(books, 4302)
+search_book(books, 4300)

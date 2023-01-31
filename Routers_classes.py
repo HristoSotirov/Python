@@ -1,3 +1,6 @@
+#  Програма в която  се съсдава клас Рутери. Създава се метод за добавяне на нови продукти.
+#  Създава се метод за изчисление на крайната цена, която се записва във фаил price.txt.
+
 class My_Routers:
     def __init__(self, manufacturer, code_of_product, price, quantity):
         self.manufacturer = manufacturer
@@ -43,5 +46,5 @@ routers = [
  
 My_Routers.add_router(routers)
 My_Routers.price_calc(routers)
-print(*routers, )
+print(*routers, sep = "\n")
 

@@ -1,3 +1,5 @@
+#  Игра на морски шах
+
 board = { 1:"-",
           2:"-",
           3:"-",
@@ -131,10 +133,6 @@ def rest():
     elif restart == "n":
       print("\nThangs for playing!")
         
-
-
-
-
 while GameRunning == True:
   pInput()
   switch()
